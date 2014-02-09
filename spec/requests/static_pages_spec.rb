@@ -30,14 +30,27 @@ describe "Static pages" do
 
   describe "About page" do
 
-  	it "should have the content 'About Us'" do
-  		visit '/static_pages/about'
-  		expect(page).to have_content('About Us')
-  	end
+    it "should have the content 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('About Us')
+    end
 
-  	it "should ahve the title 'About Us'" do
-  		visit '/static_pages/about'
-  		expect(page).to have_title('Ruby on Rails Tutorial Sample App | About Us')
-  	end
+    it "should ahve the title 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_title('Ruby on Rails Tutorial Sample App | About Us')
+    end
+  end
+
+  describe "Contact page" do
+
+    it "should have the content 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Contact')
+    end
+
+    it "should ahve the title 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_title('Ruby on Rails Tutorial Sample App | Contact')
+    end
   end
 end
